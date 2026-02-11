@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @font-face {
   font-family: "Satoshi";
-  src: url("./assets/satoshi/satoshi-light.otf") format("opentype");
+  src: url("./assets/satoshi/Satoshi-Light.otf") format("opentype");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -9,7 +9,7 @@
 
 @font-face {
   font-family: "Satoshi";
-  src: url("./assets/satoshi/satoshi-regular.otf") format("opentype");
+  src: url("./assets/satoshi/Satoshi-Regular.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -17,7 +17,7 @@
 
 @font-face {
   font-family: "Satoshi";
-  src: url("./assets/satoshi/satoshi-medium.otf") format("opentype");
+  src: url("./assets/satoshi/Satoshi-Medium.otf") format("opentype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -25,7 +25,7 @@
 
 @font-face {
   font-family: "Satoshi";
-  src: url("./assets/satoshi/satoshi-bold.otf") format("opentype");
+  src: url("./assets/satoshi/Satoshi-Bold.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;

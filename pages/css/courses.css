@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@font-face {
+  font-family: "Satoshi";
+  src: url("./assets/satoshi/satoshi-light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../../assets/satoshi/Satoshi-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../../assets/satoshi/Satoshi-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../../assets/satoshi/Satoshi-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+h1 {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 700;
+}
+
+h2 {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 500;
+}
+
+h3 {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.btn {
+  list-style: none;
+  padding: 12px 1px;
+  border: 1px solid var(--orange);
+  border-radius: 8px;
+
+  a {
+    font-weight: 400;
+    padding: 10px 16px;
+
+    border: 1px solid var(--orange);
+    border-radius: 8px;
+    background: var(--orange);
+    font-weight: 400;
+    color: white;
+  }
+}
+
+:root {
+  --heading: "Satoshi", sans-serif;
+  --orange: #fb5300;
+  --gray: #323232;
+  --dirty: #f9fafb;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  font-family: "DM Sans", sans-serif;
+  background: white;
+  background: var(--dirty);
+}
+
+.courses {
+  position: relative;
+  min-height: 100vh;
+  padding: 5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3em;
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .container {
+    background: white;
+    width: 60%;
+    border: 1px solid rgba(0, 0, 0, 0.116);
+    /* padding: 2rem 3rem; */
+    border-radius: 12px;
+    padding-top: 0;
+
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.063);
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 2rem 2rem;
+      border-bottom: 1px solid rgba(128, 128, 128, 0.212);
+
+      .title {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+
+        img {
+          height: 7rem;
+        }
+      }
+      h2 {
+        font-size: 2rem;
+      }
+    }
+
+    main {
+      padding: 1rem 2rem;
+      line-height: 2rem;
+      font-size: 1.1rem;
+      color: gray;
+    }
+  }
+}
+
+a {
+  padding: 1rem 3rem;
+  background: var(--gray);
+  border-radius: 8px;
+  color: white;
+}
+
+.moreCourses {
+  display: flex;
+  gap: 2rem 3rem;
+  width: 60%;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  .box {
+    width: 47%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.034);
+
+    gap: 1em;
+    align-items: start;
+    border-radius: 12px;
+    border: 1px solid rgba(128, 128, 128, 0.264);
+    padding: 3rem 2rem;
+    background: white;
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: gray;
+      line-height: 2rem;
+    }
+
+    a {
+      pointer-events: none;
+      cursor: default;
+      background: #00000039;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .courses {
+    padding: 5rem 2rem;
+    .container {
+      width: 100%;
+      text-align: center;
+
+      main {
+        padding: 1rem;
+      }
+      header {
+        text-align: center;
+        flex-direction: column;
+        gap: 3em;
+        .title {
+          flex-direction: column;
+        }
+      }
+    }
+
+    .moreCourses {
+      text-align: center;
+      width: 100%;
+      .box {
+        align-items: center;
+
+        width: 100%;
+      }
+    }
+  }
+}

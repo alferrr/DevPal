@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/course.css" />
+    <link rel="shortcut icon" href="../../assets/favicon.png" type="image" />
+    <title>DevPal</title>
+  </head>
+  <body>
+    <header>
+      <h1>CSS Basics</h1>
+      <span>CSS Course</span>
+    </header>
+    <section>
+      <div class="content">
+        <main id="intro">
+          <h2>Introduction</h2>
+          <p>
+            CSS (Cascading Style Sheets) is the language used to control the
+            visual presentation of HTML. In this course, you'll learn how to
+            style text, layout pages, add colors, create responsive designs, and
+            add animations. CSS works alongside HTML and JavaScript to bring
+            webpages to life.
+          </p>
+          <p>
+            CSS allows you to separate content (HTML) from presentation (CSS),
+            making your code cleaner, easier to maintain, and scalable for
+            larger projects.
+          </p>
+        </main>
+
+        <main id="syntax">
+          <h2>CSS Syntax</h2>
+          <div class="text">
+            <p>CSS rules consist of selectors, properties, and values:</p>
+            <ul>
+              <li>Selector: chooses which HTML element(s) to style</li>
+              <li>
+                Property: the aspect of the element you want to change (color,
+                font-size, margin, etc.)
+              </li>
+              <li>Value: the setting for the property</li>
+            </ul>
+            <p>Example:</p>
+            <pre>
+p {
+  color: blue;
+  font-size: 16px;
+  line-height: 1.5;
+}
+        </pre
+            >
+            <p>
+              You can also group selectors to apply the same styles to multiple
+              elements:
+            </p>
+            <pre>
+h1, h2, h3 {
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+        </pre
+            >
+          </div>
+        </main>
+
+        <main id="selectors">
+          <h2>Selectors</h2>
+          <div class="text">
+            <p>
+              Selectors allow you to target specific elements or groups of
+              elements:
+            </p>
+            <ul>
+              <li>Element Selector: <code>p { ... }</code></li>
+              <li>Class Selector: <code>.classname { ... }</code></li>
+              <li>ID Selector: <code>#idname { ... }</code></li>
+              <li>Group Selector: <code>h1, h2, h3 { ... }</code></li>
+              <li>
+                Pseudo-classes: <code>a:hover { ... }</code> – for special
+                states like hover, focus, active
+              </li>
+              <li>
+                Pseudo-elements: <code>p::first-letter { ... }</code> – style
+                parts of elements
+              </li>
+              <li>
+                Attribute Selectors: <code>input[type="text"] { ... }</code>
+              </li>
+            </ul>
+          </div>
+        </main>
+
+        <main id="colors">
+          <h2>Colors, Backgrounds & Borders</h2>
+          <div class="text">
+            <p>
+              CSS colors, backgrounds, and borders add visual style and
+              separation to content.
+            </p>
+
+            <h3>Colors</h3>
+            <ul>
+              <li>Named colors (<code>red, blue, green</code>)</li>
+              <li>Hex codes (<code>#ff0000</code>)</li>
+              <li>RGB (<code>rgb(255,0,0)</code>)</li>
+              <li>RGBA for transparency (<code>rgba(255,0,0,0.5)</code>)</li>
+              <li>HSL (<code>hsl(0, 100%, 50%)</code>)</li>
+              <li>
+                CSS variables for theming (<code>--primary-color: #3498db;</code
+                >)
+              </li>
+            </ul>
+
+            <h3>Backgrounds</h3>
+            <ul>
+              <li>background-color</li>
+              <li>background-image (<code>url('image.jpg')</code>)</li>
+              <li>background-size, background-repeat, background-position</li>
+              <li>
+                linear-gradient, radial-gradient for smooth color transitions
+              </li>
+            </ul>
+
+            <h3>Borders</h3>
+            <ul>
+              <li>border-width, border-style, border-color</li>
+              <li>border-radius for rounded corners</li>
+              <li>box-shadow for depth</li>
+            </ul>
+
+            <h3>Example</h3>
+            <pre>
+.card {
+  background: linear-gradient(135deg, #f6f8fa, #e9ecef);
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  padding: 20px;
+}
+        </pre
+            >
+          </div>
+        </main>
+
+        <main id="layouts">
+          <h2>Layouts & Positioning</h2>
+          <div class="text">
+            <p>
+              Layout is how content is arranged on a page. Understanding layout
+              is fundamental for designing professional-looking websites.
+            </p>
+
+            <h3>Block vs Inline Elements</h3>
+            <ul>
+              <li>
+                <strong>Block elements:</strong> take full width, start on a new
+                line (<code>div, p, h1-h6, section</code>)
+              </li>
+              <li>
+                <strong>Inline elements:</strong> take only the width of their
+                content, do not start on a new line (<code
+                  >span, a, strong, em</code
+                >)
+              </li>
+              <li>
+                <strong>Inline-block:</strong> behaves like inline but accepts
+                width/height (<code>display: inline-block;</code>)
+              </li>
+            </ul>
+
+            <h3>Positioning</h3>
+            <ul>
+              <li>
+                <strong>static:</strong> default positioning, flows naturally in
+                the page
+              </li>
+              <li>
+                <strong>relative:</strong> moved relative to original position
+              </li>
+              <li>
+                <strong>absolute:</strong> positioned relative to nearest
+                positioned ancestor
+              </li>
+              <li>
+                <strong>fixed:</strong> stays in viewport even when scrolling
+              </li>
+              <li>
+                <strong>sticky:</strong> acts like relative until scroll passes
+                threshold, then fixed
+              </li>
+            </ul>
+
+            <h3>Layout Techniques</h3>
+            <ul>
+              <li>
+                <strong>Flexbox:</strong> one-dimensional layout, aligns items
+                in rows or columns (<code>display: flex;</code>)
+              </li>
+              <li>
+                <strong>CSS Grid:</strong> two-dimensional layout, control rows
+                & columns (<code>display: grid;</code>)
+              </li>
+              <li>
+                <strong>Floats:</strong> old technique to wrap text around
+                elements (<code>float: left/right;</code>)
+              </li>
+              <li>
+                <strong>Positioning with percentages:</strong> relative widths &
+                heights for responsive layouts
+              </li>
+            </ul>
+
+            <h3>Deep Practice Examples</h3>
+            <pre>
+/* Flexbox Example */
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Grid Example */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+        </pre
+            >
+          </div>
+        </main>
+
+        <main id="typography">
+          <h2>Typography & Text Styling</h2>
+          <div class="text">
+            <p>
+              Typography determines how readable and visually appealing your
+              text is. CSS gives full control over fonts, size, spacing,
+              alignment, and decoration.
+            </p>
+
+            <h3>Fonts & Text</h3>
+            <ul>
+              <li>
+                <strong>font-family:</strong> sets typeface (<code
+                  >sans-serif, serif, monospace</code
+                >)
+              </li>
+              <li>
+                <strong>font-size:</strong> controls size (<code
+                  >px, em, rem, %</code
+                >)
+              </li>
+              <li>
+                <strong>font-weight:</strong> controls boldness (<code
+                  >normal, bold, 100-900</code
+                >)
+              </li>
+              <li>
+                <strong>line-height:</strong> controls vertical spacing between
+                lines
+              </li>
+              <li><strong>text-align:</strong> left, right, center, justify</li>
+              <li>
+                <strong>text-decoration:</strong> underline, overline,
+                line-through, none
+              </li>
+            </ul>
+
+            <h3>Advanced Text Styling</h3>
+            <ul>
+              <li>letter-spacing and word-spacing</li>
+              <li>text-transform: uppercase, lowercase, capitalize</li>
+              <li>text-shadow: subtle depth and visual effects</li>
+              <li>
+                hyphens: control word breaking (<code>hyphens: auto;</code>)
+              </li>
+            </ul>
+
+            <h3>Practical Example</h3>
+            <pre>
+p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  text-align: justify;
+  color: #333;
+}
+        </pre
+            >
+          </div>
+        </main>
+
+        <main id="responsive">
+          <h2>Responsive Design Basics</h2>
+          <div class="text">
+            <p>
+              Responsive design ensures your website looks good on all screen
+              sizes, from phones to desktops.
+            </p>
+
+            <h3>Media Queries</h3>
+            <ul>
+              <li>
+                Use <code>@media</code> to apply styles based on viewport width
+                or height
+              </li>
+              <li>
+                Mobile-first design: define small screen styles first, then
+                scale up
+              </li>
+              <li>
+                Breakpoints: <code>576px, 768px, 992px, 1200px</code> (common)
+              </li>
+            </ul>
+
+            <h3>Flexible Units</h3>
+            <ul>
+              <li>Percentages for widths (<code>width: 80%</code>)</li>
+              <li>em/rem for font sizes relative to root or parent</li>
+              <li>vh/vw for viewport-based sizing</li>
+            </ul>
+
+            <h3>Fluid Layout Example</h3>
+            <pre>
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+}
+        </pre
+            >
+          </div>
+        </main>
+
+        <main id="organization">
+          <h2>Organizing Your CSS Code</h2>
+          <div class="text">
+            <p>
+              Writing clean, maintainable CSS is just as important as learning
+              the syntax.
+            </p>
+
+            <h3>Best Practices</h3>
+            <ul>
+              <li>Use external CSS files instead of inline styles</li>
+              <li>Group related styles together</li>
+              <li>Use meaningful class and ID names</li>
+              <li>Comment your sections clearly</li>
+              <li>Reuse classes instead of repeating rules</li>
+              <li>Keep CSS specificity low to avoid conflicts</li>
+            </ul>
+
+            <h3>Folder Structure Example</h3>
+            <pre>
+/css
+  base.css       /* reset and basic styles */
+  layout.css     /* grid, flexbox, positioning */
+  typography.css /* fonts, headings, paragraphs */
+  components.css /* buttons, cards, modals */
+  utilities.css  /* helpers: margin, padding, colors */
+        </pre
+            >
+
+            <h3>Using CSS Variables</h3>
+            <pre>
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --font-base: 'Roboto', sans-serif;
+}
+body {
+  font-family: var(--font-base);
+  color: var(--primary-color);
+}
+        </pre
+            >
+          </div>
+        </main>
+
+        <main id="conclusion">
+          <h2>Congratulations!</h2>
+          <p>
+            You've successfully completed the
+            <strong>HTML & CSS course</strong>!
+          </p>
+          <p>
+            You've learned how to structure webpages with HTML, style them with
+            CSS, work with layouts, typography, colors, backgrounds, and make
+            your pages responsive.
+          </p>
+          <p>
+            Great job on finishing the course! Keep practicing and stay tuned,
+            because <strong>JavaScript</strong> is coming next to make your
+            pages interactive.
+          </p>
+        </main>
+
+        <a href="../courses.html" class="next"> Back to Courses</a>
+      </div>
+
+      <aside>
+        <h4>Lesson Overview</h4>
+        <ul>
+          <li><a href="#intro">Introduction</a></li>
+          <li><a href="#syntax">CSS Syntax</a></li>
+          <li><a href="#selectors">Selectors</a></li>
+          <li><a href="#colors">Colors in CSS</a></li>
+          <li><a href="#layouts">Layouts & Positioning</a></li>
+          <li><a href="#typography">Typography & Text Styling</a></li>
+          <li><a href="#responsive">Responsive Design Basics</a></li>
+          <li><a href="#organization">Organizing Your CSS Code</a></li>
+        </ul>
+      </aside>
+    </section>
+
+    <script defer src="../js/app.js"></script>
+  </body>
+</html>
