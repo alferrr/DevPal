@@ -1,0 +1,131 @@
+header {
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  span {
+    font-weight: 500;
+    color: gray;
+  }
+}
+
+section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: start;
+  gap: 1em;
+
+  .content {
+    width: 45%;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+
+    main {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      h2 {
+        font-size: 2rem;
+      }
+      p {
+        line-height: 2rem;
+      }
+
+      code {
+        background: rgb(25, 25, 25);
+        color: var(--orange);
+        padding: 5px;
+        border-radius: 3px;
+      }
+      .text {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-left: 1rem;
+        margin-top: 1rem;
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 1em;
+          margin: 1rem 0;
+          margin-left: 40px;
+        }
+      }
+    }
+  }
+  aside {
+    width: 30%;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    position: sticky;
+    top: 2rem;
+    padding-right: 10rem;
+
+    h4 {
+      font-size: 1.5rem;
+      /* color: gray; */
+      font-weight: 300;
+    }
+    ul {
+      /* margin-left: 2rem; */
+      li {
+        list-style: none;
+        padding: 14px;
+        border-left: 2px solid gray;
+
+        a {
+          text-decoration: none;
+          font-size: 14px;
+          font-weight: 700;
+          color: gray;
+        }
+      }
+    }
+  }
+}
+
+.active {
+  border-color: var(--orange);
+  background: #fb54001d;
+  a {
+    color: var(--orange);
+  }
+}
+
+pre {
+  padding: 20px;
+  border-radius: 12px;
+  background: #1a1b26;
+  color: #bb9af7;
+  line-height: 1.5rem;
+}
+
+.next {
+  color: #fb5300;
+}
+
+@media screen and (max-width: 767px) {
+  header {
+    text-align: center;
+  }
+  section {
+    padding: 2rem;
+    .content {
+      width: 100%;
+    }
+
+    aside {
+      display: none;
+    }
+  }
+}

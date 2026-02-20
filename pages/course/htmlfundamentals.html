@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/course.css" />
+    <link rel="shortcut icon" href="../../assets/favicon.png" type="image" />
+    <title>DevPal</title>
+  </head>
+  <body>
+    <header>
+      <h1>HTML Fundamentals</h1>
+      <span>HTML Course</span>
+    </header>
+    <section>
+      <div class="content">
+        <main class="introduction" id="intro">
+          <h2>Introduction</h2>
+          <p>
+            This is where structure meets the web. In this unit, you’ll be
+            introduced to HTML—the foundational language that gives the web its
+            shape and meaning. HTML is not about visuals or interactivity; it’s
+            about structure, clarity, and intent. Every webpage, application,
+            and interface on the internet begins here. <br /><br />We’ll focus
+            on how developers use HTML to organize content, communicate meaning
+            to browsers, and create documents that scale as projects grow.
+            You’ll learn the elements and semantic patterns that power real,
+            working web pages—not just toy examples. Along the way, you’ll begin
+            to think the way developers do: choosing the right elements,
+            structuring content logically, and building with accessibility and
+            maintainability in mind. <br /><br />This unit assumes no prior
+            experience. We’ll start with the basics—what HTML is, how browsers
+            interpret it, and how a webpage is structured—before moving into
+            commonly used elements, semantic layout, links, media, and forms.
+            Each lesson builds toward the same goal: creating a solid foundation
+            that CSS and JavaScript can reliably build upon. <br /><br />
+            By the end of this unit, you’ll understand how HTML fits into modern
+            web development and why it remains essential no matter how advanced
+            the technology stack becomes. You’ll be able to read and write
+            clean, meaningful HTML, recognize good structure versus bad
+            structure, and confidently create the backbone of a real webpage.
+            <br /><br />
+            This unit is intentionally practical. Before worrying about styling,
+            frameworks, or complex logic, it’s crucial to understand how content
+            is structured and why that structure matters. Strong HTML
+            fundamentals don’t just make better pages—they make better
+            developers.
+          </p>
+        </main>
+        <main id="what">
+          <h2>What HTML really is</h2>
+          <div class="text">
+            <h3>What is HTML?</h3>
+            <p>
+              HTML (HyperText Markup Language) is the structure layer of the
+              web. It defines what things are, not how they look.
+            </p>
+            <ul>
+              <li>HTML = structure & meaning</li>
+              <li>CSS = presentation</li>
+              <li>JavaScript = behavior</li>
+            </ul>
+            <p>Think of HTML as the skeleton of a building.</p>
+          </div>
+        </main>
+        <main id="anatomy">
+          <h2>Anatomy of an HTML Document</h2>
+          <p>Every real webpage starts with a basic document structure.</p>
+          <div class="text">
+            <h3>Core Document Parts</h3>
+            <ul>
+              <li>
+                <code>&lt;!DOCTYPE html&gt;</code> — declares the document as
+                HTML5
+              </li>
+              <li><code>&lt;html&gt;</code> – root element</li>
+              <li><code>&lt;head&gt;</code> – metadata, not visible content</li>
+              <li>
+                <code>&lt;body&gt;</code> – everything visible on the page
+              </li>
+            </ul>
+            <h3>Why structure matters</h3>
+            <p>A consistent structure:</p>
+            <ul>
+              <li>Improves browser compatibility</li>
+              <li>Helps search engines understand your page</li>
+              <li>Makes scaling and maintenance easier</li>
+            </ul>
+          </div>
+        </main>
+        <main id="elements">
+          <h2>Elements, Tags, and Nesting</h2>
+          <div class="text">
+            <h3>What is an element?</h3>
+            <p>An element is made of:</p>
+            <ul>
+              <li>Opening tag</li>
+              <li>Content</li>
+              <li>Closing tag</li>
+            </ul>
+            <p>Some elements are void elements (no closing tag):</p>
+            <ul>
+              <li>
+                <code>&lt;img&gt;</code>, <code>&lt;br&gt;</code>,
+                <code>&lt;hr&gt;</code>, <code>&lt;meta&gt;</code>,
+                <code>&lt;link&gt;</code>
+              </li>
+            </ul>
+            <h3>Nesting rules</h3>
+            <ul>
+              <li>Elements can contain other elements</li>
+              <li>Nesting must be properly closed</li>
+              <li>Incorrect nesting breaks layout and accessibility</li>
+            </ul>
+            <p>Good nesting = predictable structure.</p>
+          </div>
+        </main>
+        <main id="common">
+          <h2>Common Content Elements</h2>
+          <div class="text">
+            <h3>Text Content</h3>
+            <ul>
+              <li>
+                <strong>Headings</strong>: <code>&lt;h1&gt;</code> to
+                <code>&lt;h6&gt;</code>
+              </li>
+
+              <li><strong>Paragraphs: </strong> <code>&lt;p&gt;</code></li>
+              <li>
+                <strong>Inline text: </strong>
+                <code>&lt;span&gt;</code> <code>&lt;strong&gt;</code>
+                <code>&lt;em&gt;</code>
+              </li>
+            </ul>
+            <h3>Lists</h3>
+            <ul>
+              <li><strong>Ordered Lists: </strong><code>&lt;ol&gt;</code></li>
+              <li><strong>Unordered Lists: </strong><code>&lt;ul&gt;</code></li>
+              <li><strong>List Items: </strong><code>&lt;li&gt;</code></li>
+            </ul>
+            <h3>Why This Matters</h3>
+            <p>Correct text structure:</p>
+            <ul>
+              <li>Improves readability</li>
+              <li>Improves SEO</li>
+              <li>Improves accessibility for screen readers</li>
+            </ul>
+          </div>
+        </main>
+        <main id="attributes">
+          <h2>Attributes and Values</h2>
+          <div class="text">
+            <h3>What are attributes?</h3>
+            <p>Attributes add extra information to elements.</p>
+            <ul>
+              <li><strong>id</strong> – unique identifier for an element</li>
+              <li>
+                <strong>class</strong> – group elements for styling or scripting
+              </li>
+              <li>
+                <strong>href</strong> – hyperlink reference (used in
+                <code>&lt;a&gt;</code>)
+              </li>
+              <li>
+                <strong>src</strong> – source path (used in
+                <code>&lt;img&gt;</code>, <code>&lt;script&gt;</code>)
+              </li>
+              <li><strong>alt</strong> – alternative text for images</li>
+            </ul>
+            <h3>Best Practices</h3>
+            <ul>
+              <li>Always quote attribute values</li>
+              <li>Use <code>id</code> sparingly</li>
+              <li>
+                Use <code>class</code> for styling and grouping multiple
+                elements
+              </li>
+            </ul>
+            <p>Attributes are how HTML connects to CSS and JavaScript.</p>
+          </div>
+        </main>
+
+        <main id="links">
+          <h2>Links and Navigation</h2>
+          <div class="text">
+            <h3>Anchor Elements</h3>
+            <p>
+              Links are created using the anchor element <code>&lt;a&gt;</code>.
+            </p>
+            <ul>
+              <li>Link to other pages</li>
+              <li>Link to sections within the same page</li>
+              <li>Link to external websites</li>
+              <li>Link to downloadable files</li>
+            </ul>
+            <h3>Navigation Patterns</h3>
+            <ul>
+              <li>
+                Navigation is usually grouped in a
+                <code>&lt;nav&gt;</code> element
+              </li>
+              <li>Links should be descriptive and meaningful</li>
+            </ul>
+            <p>
+              Good navigation helps users and search engines understand your
+              site structure.
+            </p>
+          </div>
+        </main>
+
+        <main id="images">
+          <h2>Images and Media</h2>
+          <div class="text">
+            <h3>Images</h3>
+            <p>Images add context but must be used responsibly.</p>
+            <ul>
+              <li><strong>src</strong> defines the image path</li>
+              <li>
+                <strong>alt</strong> provides alternative text for accessibility
+              </li>
+            </ul>
+            <h3>Other Media</h3>
+            <ul>
+              <li>Audio and video are supported natively in HTML5</li>
+              <li>
+                Use media thoughtfully—never purely decorative without context
+              </li>
+            </ul>
+          </div>
+        </main>
+
+        <main id="semantic">
+          <h2>Semantic HTML — The Core of Modern HTML</h2>
+          <div class="text">
+            <h3>What is semantic HTML?</h3>
+            <p>Semantic elements describe meaning, not appearance.</p>
+            <ul>
+              <li><code>&lt;header&gt;</code></li>
+              <li><code>&lt;nav&gt;</code></li>
+              <li><code>&lt;main&gt;</code></li>
+              <li><code>&lt;section&gt;</code></li>
+              <li><code>&lt;article&gt;</code></li>
+              <li><code>&lt;aside&gt;</code></li>
+              <li><code>&lt;footer&gt;</code></li>
+            </ul>
+            <h3>Why Semantics Matter</h3>
+            <ul>
+              <li>Better accessibility for assistive technologies</li>
+              <li>Improved SEO</li>
+              <li>Cleaner, more maintainable code</li>
+              <li>Easier collaboration in teams</li>
+            </ul>
+          </div>
+        </main>
+
+        <main id="page">
+          <h2>Page Layout and Content Organization</h2>
+          <div class="text">
+            <h3>Logical Structure</h3>
+            <p>A well-structured page usually follows this pattern:</p>
+            <ul>
+              <li><code>&lt;header&gt;</code> – branding, navigation</li>
+              <li><code>&lt;main&gt;</code> – primary content</li>
+              <li><code>&lt;aside&gt;</code> – supporting content</li>
+              <li><code>&lt;footer&gt;</code> – meta information, contacts</li>
+            </ul>
+            <h3>Sections vs Articles</h3>
+            <ul>
+              <li>
+                <code>&lt;section&gt;</code>: grouped content with a theme
+              </li>
+              <li>
+                <code>&lt;article&gt;</code>: standalone, reusable content
+              </li>
+            </ul>
+            <p>
+              Choosing the right element improves clarity and maintainability.
+            </p>
+          </div>
+        </main>
+
+        <main id="forms">
+          <h2>Forms and User Input</h2>
+          <div class="text">
+            <h3>What Forms Do</h3>
+            <p>Forms allow users to send data to a server or service.</p>
+            <h3>Common Form Controls</h3>
+            <ul>
+              <li>Text inputs</li>
+              <li>Email inputs</li>
+              <li>Password inputs</li>
+              <li>Buttons</li>
+              <li>Labels for inputs</li>
+            </ul>
+            <h3>Accessibility Rules</h3>
+            <ul>
+              <li>
+                Every input should have a corresponding
+                <code>&lt;label&gt;</code>
+              </li>
+              <li>
+                Group related inputs logically with
+                <code>&lt;fieldset&gt;</code> if needed
+              </li>
+              <li>
+                Use correct input types for better validation and usability
+              </li>
+            </ul>
+          </div>
+        </main>
+
+        <main id="accessibility">
+          <h2>Accessibility Fundamentals</h2>
+          <div class="text">
+            <h3>What is Accessibility?</h3>
+            <p>
+              Accessibility ensures that everyone can use your website,
+              regardless of ability.
+            </p>
+            <ul>
+              <li>Use semantic elements appropriately</li>
+              <li>Follow correct heading order</li>
+              <li>Provide alt text for images</li>
+              <li>Ensure all form inputs have labels</li>
+            </ul>
+            <p>
+              Accessibility is not optional; it’s a core part of professional
+              HTML development.
+            </p>
+          </div>
+        </main>
+
+        <main id="html">
+          <h2>HTML Validation and Best Practices</h2>
+          <div class="text">
+            <h3>Validation</h3>
+            <p>Valid HTML follows standards and best practices.</p>
+            <ul>
+              <li>Reduces bugs</li>
+              <li>Ensures consistent browser support</li>
+              <li>Makes debugging easier</li>
+            </ul>
+            <h3>Best Practices</h3>
+            <ul>
+              <li>Use semantic elements whenever possible</li>
+              <li>Keep structure clean and logical</li>
+              <li>Avoid unnecessary <code>&lt;div&gt;</code> elements</li>
+              <li>Write readable and maintainable markup</li>
+            </ul>
+            <p>Clean HTML scales; messy HTML does not.</p>
+          </div>
+        </main>
+
+        <main id="how">
+          <h2>How HTML Fits Into Real Projects</h2>
+          <div class="text">
+            <h3>In Real-World Development</h3>
+            <ul>
+              <li>Defines content structure for your webpages and apps</li>
+              <li>Acts as a foundation for CSS and JavaScript</li>
+              <li>Serves as a shared reference for teams</li>
+            </ul>
+            <h3>Thinking Like a Developer</h3>
+            <ul>
+              <li>What is this content?</li>
+              <li>Does this element describe its purpose clearly?</li>
+              <li>Will this structure scale as the site grows?</li>
+            </ul>
+            <p>
+              This mindset separates beginners from professional developers.
+            </p>
+          </div>
+        </main>
+
+        <main id="final">
+          <h2>Final Takeaway</h2>
+          <div class="text">
+            <p>HTML is not about memorizing tags; it’s about:</p>
+            <ul>
+              <li>Meaning</li>
+              <li>Structure</li>
+              <li>Clarity</li>
+              <li>Scalability</li>
+            </ul>
+            <p>
+              Mastering HTML fundamentals allows you to build any web experience
+              on a solid foundation.
+            </p>
+          </div>
+        </main>
+
+        <main id="completion">
+          <h2>Congratulations!</h2>
+          <p>You've successfully completed the <strong>HTML course</strong>!</p>
+          <p>
+            Now that you understand the structure of webpages and how to
+            organize content with HTML, you're ready to make your pages look
+            amazing.
+          </p>
+          <p>
+            It's time to move on to <strong>CSS</strong> to style your pages,
+            add colors, control layouts, and make your websites visually
+            appealing.
+          </p>
+          <p>
+            Keep up the great work and get ready to bring your webpages to life
+            with CSS!
+          </p>
+        </main>
+        <a href="./cssbasics.html" class="next">Move on to CSS Basics</a>
+      </div>
+      <aside>
+        <h4>Lesson Overview</h4>
+        <ul>
+          <li><a href="#intro">Introduction</a></li>
+          <li><a href="#what">What HTML Really Is</a></li>
+          <li><a href="#anatomy">Anatomy of an HTML Document</a></li>
+          <li><a href="#elements">Elements, Tags, and Nesting</a></li>
+          <li><a href="#common">Common Content Elements</a></li>
+          <li><a href="#attributes">Attributes and Values</a></li>
+          <li><a href="#links">Links and Navigation</a></li>
+          <li><a href="#images">Images and Media</a></li>
+          <li>
+            <a href="#semantic">Semantic HTML — The Core of Modern HTML</a>
+          </li>
+          <li><a href="#page">Page Layout and Content Organization</a></li>
+          <li><a href="#forms">Forms and User Input</a></li>
+          <li><a href="#accessibility">Accessibility Fundamentals</a></li>
+          <li><a href="#html">HTML Validation and Best Practices</a></li>
+          <li><a href="#how">How HTML Fits Into Real Projects</a></li>
+          <!-- <li><a href="#final">Final Takeaway</a></li> -->
+        </ul>
+      </aside>
+    </section>
+    <script defer src="../js/app.js"></script>
+  </body>
+</html>
