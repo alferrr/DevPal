@@ -408,7 +408,7 @@ body {
           background: url(./images/charles.png) no-repeat center/cover;
 
           &::before {
-            content: "Charles Siato";
+            content: "Charles Siaton";
           }
         }
       }
