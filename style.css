@@ -120,6 +120,34 @@ body {
       &:first-child {
         gap: 8px;
       }
+
+      &:last-child {
+        a {
+          /* border-radius: 12px; */
+          padding: 10px 5px 10px;
+          transition: 0.3s ease;
+          border-bottom: 2px solid white;
+          color: rgba(128, 128, 128, 0.638);
+
+          &:last-child {
+            padding: 10px 16px;
+            border: none;
+            color: white;
+
+            &:hover {
+              color: white;
+              border-color: none;
+              background: rgba(0, 0, 0, 0.054);
+              background: var(--orange);
+            }
+          }
+          &:hover {
+            color: black;
+            border-color: rgba(128, 128, 128, 0.282);
+            /* background: rgba(0, 0, 0, 0.054); */
+          }
+        }
+      }
     }
   }
 
