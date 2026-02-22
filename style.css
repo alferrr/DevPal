@@ -664,9 +664,7 @@ body {
       margin-top: 6rem; /* border: 1px solid black; */
       height: auto;
       padding: 2rem;
-      .video {
-        /* display: none; */
-      }
+
       p {
         width: 100% !important;
       }
