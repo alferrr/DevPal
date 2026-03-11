@@ -193,6 +193,13 @@ pre {
   color: #fb5300;
 }
 
+ol {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  margin: 1rem 0rem 1rem 3rem;
+}
 @media screen and (max-width: 767px) {
   header {
     text-align: center;
