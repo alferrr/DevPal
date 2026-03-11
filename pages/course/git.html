@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/course.css" />
+    <link rel="shortcut icon" href="../../assets/favicon.png" type="image" />
+    <title>Git Fundamentals</title>
+  </head>
+  <body>
+    <header>
+      <h1>Git Fundamentals</h1>
+      <span>Git Course</span>
+    </header>
+
+    <section>
+      <div class="content">
+        <main class="introduction" id="intro">
+          <h2>Introduction</h2>
+          <p>
+            In this unit, you'll learn how developers manage and track changes
+            in code using <strong>Git</strong>. Git is the most widely used
+            version control system in the world and is an essential tool for
+            professional development. <br /><br />
+            Whether you're building projects alone or collaborating with teams,
+            Git allows you to track changes, revert mistakes, create new
+            features safely, and maintain a clean history of your work.
+            <br /><br />
+            By the end of this course, you'll understand how Git works, how to
+            track changes in your projects, and how to work with remote
+            repositories like GitHub.
+          </p>
+        </main>
+
+        <main id="what">
+          <h2>What Git Really Is</h2>
+          <div class="text">
+            <h3>Version Control</h3>
+            <p>
+              Git is a <strong>version control system</strong>. It keeps track
+              of changes in files over time.
+            </p>
+
+            <ul>
+              <li>Tracks changes in code</li>
+              <li>Allows you to revert mistakes</li>
+              <li>Maintains a full project history</li>
+              <li>Supports collaboration between developers</li>
+            </ul>
+
+            <h3>Why Developers Use Git</h3>
+            <ul>
+              <li>Prevents losing work</li>
+              <li>Allows experimentation safely</li>
+              <li>Makes teamwork easier</li>
+            </ul>
+          </div>
+        </main>
+
+        <main id="install">
+          <h2>Installing Git</h2>
+          <div class="text">
+            <h3>Getting Git</h3>
+            <p>
+              Git runs from the command line and works on all major operating
+              systems.
+            </p>
+
+            <ul>
+              <li>Windows</li>
+              <li>macOS</li>
+              <li>Linux</li>
+            </ul>
+
+            <h3>Verify Installation</h3>
+
+            <pre><code>git --version</code></pre>
+
+            <p>
+              If Git is installed correctly, this command will show the
+              installed version.
+            </p>
+          </div>
+        </main>
+
+        <main id="repository">
+          <h2>Repositories</h2>
+          <div class="text">
+            <h3>What is a Repository?</h3>
+
+            <p>A repository (repo) is a project folder that Git tracks.</p>
+
+            <ul>
+              <li>Stores your files</li>
+              <li>Tracks changes</li>
+              <li>Maintains commit history</li>
+            </ul>
+
+            <h3>Creating a Repository</h3>
+
+            <pre><code>git init</code></pre>
+
+            <p>This command turns the current folder into a Git repository.</p>
+          </div>
+        </main>
+
+        <main id="tracking">
+          <h2>Tracking Files</h2>
+          <div class="text">
+            <h3>Staging Files</h3>
+
+            <p>
+              Git uses a staging area to prepare files before saving them to
+              history.
+            </p>
+
+            <pre><code>git add filename</code></pre>
+
+            <p>To add all files:</p>
+
+            <pre><code>git add .</code></pre>
+
+            <h3>Checking Status</h3>
+
+            <pre><code>git status</code></pre>
+
+            <p>
+              This command shows which files are tracked, modified, or staged.
+            </p>
+          </div>
+        </main>
+
+        <main id="commits">
+          <h2>Commits</h2>
+          <div class="text">
+            <h3>What is a Commit?</h3>
+
+            <p>A commit is a saved snapshot of your project.</p>
+
+            <ul>
+              <li>Records changes</li>
+              <li>Includes a message describing what changed</li>
+            </ul>
+
+            <pre><code>git commit -m "Initial project setup"</code></pre>
+
+            <h3>Commit Best Practices</h3>
+
+            <ul>
+              <li>Write clear messages</li>
+              <li>Keep commits focused</li>
+              <li>Commit often</li>
+            </ul>
+          </div>
+        </main>
+
+        <main id="history">
+          <h2>Viewing Project History</h2>
+          <div class="text">
+            <h3>Git Log</h3>
+
+            <pre><code>git log</code></pre>
+
+            <p>This command shows the full commit history of your project.</p>
+
+            <ul>
+              <li>Commit IDs</li>
+              <li>Author information</li>
+              <li>Commit messages</li>
+              <li>Timestamps</li>
+            </ul>
+          </div>
+        </main>
+
+        <main id="branches">
+          <h2>Branches</h2>
+          <div class="text">
+            <h3>What Are Branches?</h3>
+
+            <p>
+              Branches allow you to work on new features without affecting the
+              main project.
+            </p>
+
+            <ul>
+              <li>Create experimental features</li>
+              <li>Fix bugs separately</li>
+              <li>Develop safely</li>
+            </ul>
+
+            <pre><code>git branch feature-name</code></pre>
+
+            <pre><code>git checkout feature-name</code></pre>
+          </div>
+        </main>
+
+        <main id="github">
+          <h2>GitHub and Remote Repositories</h2>
+          <div class="text">
+            <h3>What is GitHub?</h3>
+
+            <p>GitHub is a platform that hosts Git repositories online.</p>
+
+            <ul>
+              <li>Backup your code</li>
+              <li>Share projects</li>
+              <li>Collaborate with other developers</li>
+            </ul>
+
+            <h3>Connecting a Remote Repository</h3>
+
+            <pre><code>git remote add origin repository-url</code></pre>
+
+            <pre><code>git push -u origin main</code></pre>
+          </div>
+        </main>
+
+        <main id="workflow">
+          <h2>Basic Git Workflow</h2>
+          <div class="text">
+            <p>Most developers follow this workflow:</p>
+
+            <ol>
+              <li>Edit files</li>
+              <li>Stage changes</li>
+              <li>Commit changes</li>
+              <li>Push to GitHub</li>
+            </ol>
+
+            <p>This creates a reliable history of your project.</p>
+          </div>
+        </main>
+
+        <main id="collaboration">
+          <h2>Collaboration with Git</h2>
+          <div class="text">
+            <h3>Working With Other Developers</h3>
+
+            <p>
+              One of Git’s greatest strengths is enabling developers to
+              collaborate on the same project without overwriting each other’s
+              work.
+            </p>
+
+            <ul>
+              <li>Multiple developers can work on the same repository</li>
+              <li>Each developer can create their own branches</li>
+              <li>Changes can be reviewed before merging</li>
+            </ul>
+
+            <h3>Pulling Changes</h3>
+
+            <p>
+              When working with a team, you should regularly pull updates from
+              the shared repository.
+            </p>
+
+            <pre><code>git pull</code></pre>
+
+            <p>
+              This command fetches the latest changes from the remote repository
+              and updates your local project.
+            </p>
+
+            <h3>Pull Requests</h3>
+
+            <p>
+              On platforms like GitHub, developers typically submit their
+              changes through a <strong>pull request</strong>.
+            </p>
+
+            <ul>
+              <li>Propose new features or fixes</li>
+              <li>Allow team members to review code</li>
+              <li>Ensure code quality before merging</li>
+            </ul>
+
+            <h3>Code Reviews</h3>
+
+            <p>
+              Reviewing code is an important part of teamwork. It helps catch
+              bugs, improve code quality, and share knowledge across the team.
+            </p>
+
+            <ul>
+              <li>Check logic and readability</li>
+              <li>Suggest improvements</li>
+              <li>Ensure project standards are followed</li>
+            </ul>
+
+            <p>
+              Collaboration is a core part of modern development, and Git makes
+              it possible for teams around the world to build software together.
+            </p>
+          </div>
+        </main>
+
+        <main id="best">
+          <h2>Git Best Practices</h2>
+          <div class="text">
+            <ul>
+              <li>Commit often</li>
+              <li>Write meaningful commit messages</li>
+              <li>Use branches for new features</li>
+              <li>Keep repositories organized</li>
+              <li>Push work regularly</li>
+            </ul>
+
+            <p>
+              These habits make collaboration and project maintenance much
+              easier.
+            </p>
+          </div>
+        </main>
+
+        <main id="completion">
+          <h2>Congratulations!</h2>
+
+          <p>You've completed the <strong>Git Fundamentals course</strong>.</p>
+
+          <p>
+            You now understand how developers track changes, manage project
+            history, and collaborate using version control.
+          </p>
+
+          <p>
+            Git is a core skill used by nearly every professional developer.
+            Mastering it will help you build projects confidently and work with
+            teams more effectively.
+          </p>
+
+          <p>
+            Keep practicing by using Git in your own projects and pushing your
+            work to GitHub.
+          </p>
+        </main>
+
+        <a href="../courses.html" class="next">Back to Courses</a>
+      </div>
+
+      <aside>
+        <h4>Lesson Overview</h4>
+        <ul>
+          <li><a href="#intro">Introduction</a></li>
+          <li><a href="#what">What Git Really Is</a></li>
+          <li><a href="#install">Installing Git</a></li>
+          <li><a href="#repository">Repositories</a></li>
+          <li><a href="#tracking">Tracking Files</a></li>
+          <li><a href="#commits">Commits</a></li>
+          <li><a href="#history">Viewing Project History</a></li>
+          <li><a href="#branches">Branches</a></li>
+          <li><a href="#github">GitHub and Remote Repositories</a></li>
+          <li><a href="#workflow">Basic Git Workflow</a></li>
+          <li><a href="#collaboration">Collaboration with Git</a></li>
+
+          <li><a href="#best">Git Best Practices</a></li>
+        </ul>
+      </aside>
+    </section>
+
+    <script defer src="../js/app.js"></script>
+  </body>
+</html>

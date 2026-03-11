@@ -261,6 +261,14 @@ a {
       cursor: default;
       background: #00000039;
     }
+
+    &:first-child {
+      a {
+        pointer-events: all;
+        cursor: pointer;
+        background: var(--gray);
+      }
+    }
   }
 }
 
