@@ -53,9 +53,15 @@ a {
 
 .btn {
   list-style: none;
-  padding: 12px 1px;
+  padding: 1px 1.5px;
   border: 1px solid var(--orange);
   border-radius: 8px;
+  display: flex;
+  /* flex-direction: column; */
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 
   a {
     font-weight: 400;
@@ -66,6 +72,7 @@ a {
     background: var(--orange);
     font-weight: 400;
     color: white;
+    flex-grow: 1;
   }
 }
 
@@ -159,7 +166,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 70vh;
+    min-height: 70vh;
     gap: 1.5rem;
 
     .pill {
@@ -191,7 +198,7 @@ body {
   }
 
   footer {
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -496,7 +503,7 @@ body {
       height: 60vh;
       display: flex;
       flex-direction: column;
-      align-items: start;
+      align-items: stretch;
       gap: 1em;
       padding: 20px;
       border: 1px solid rgba(0, 0, 0, 0.2);
@@ -519,6 +526,10 @@ body {
         }
         .btn {
           border-color: black;
+          display: flex;
+          align-items: stretch;
+          justify-content: center;
+          text-align: center;
           a {
             border-color: black;
             background: black;
@@ -545,15 +556,6 @@ body {
           span {
             color: var(--orange);
           }
-        }
-      }
-
-      .btn {
-        position: absolute;
-        left: 10%;
-        bottom: 20px;
-        a {
-          padding: 10px 8rem;
         }
       }
     }
@@ -725,13 +727,7 @@ body {
           height: auto;
         }
 
-        .btn {
-          position: static;
-          left: 0;
-          bottom: 0;
-          a {
-            padding: 10px 20px;
-          }
+        
         }
       }
     }
