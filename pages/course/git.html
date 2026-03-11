@@ -234,63 +234,121 @@
         <main id="collaboration">
           <h2>Collaboration with Git</h2>
           <div class="text">
-            <h3>Working With Other Developers</h3>
+            <h3>How Teams Work With Git</h3>
 
             <p>
-              One of Git’s greatest strengths is enabling developers to
-              collaborate on the same project without overwriting each other’s
-              work.
+              In real development teams, multiple developers work on the same
+              project. Git allows everyone to work safely without overwriting
+              each other's code.
+            </p>
+
+            <p>
+              Most teams follow a workflow where new features are built on
+              separate branches and then merged into the main project using pull
+              requests.
+            </p>
+
+            <h3>Step 1 — Update Your Local Main Branch</h3>
+
+            <p>
+              Before starting new work, you should always make sure your local
+              <code>main</code> branch is up to date with the remote repository.
+            </p>
+
+            <pre><code>git checkout main
+git pull origin main</code></pre>
+
+            <p>
+              This ensures you're starting from the latest version of the
+              project.
+            </p>
+
+            <h3>Step 2 — Create a Feature Branch</h3>
+
+            <p>
+              Instead of working directly on <code>main</code>, developers
+              create a new branch for each feature or fix.
+            </p>
+
+            <pre><code>git checkout -b feature-login-page</code></pre>
+
+            <p>
+              This keeps the main project stable while new work is being
+              developed.
+            </p>
+
+            <h3>Step 3 — Make Changes and Commit</h3>
+
+            <p>
+              After making changes to the project, stage and commit your work.
+            </p>
+
+            <pre><code>git add .
+git commit -m "Add login page layout"</code></pre>
+
+            <p>
+              Commits create snapshots of your progress and help track changes.
+            </p>
+
+            <h3>Step 4 — Push Your Branch</h3>
+
+            <p>
+              Once your work is ready to share, push your branch to the remote
+              repository.
+            </p>
+
+            <pre><code>git push origin feature-login-page</code></pre>
+
+            <p>Your branch will now appear on platforms like GitHub.</p>
+
+            <h3>Step 5 — Create a Pull Request</h3>
+
+            <p>
+              On GitHub, you open a <strong>Pull Request (PR)</strong> to
+              propose merging your feature into the <code>main</code> branch.
             </p>
 
             <ul>
-              <li>Multiple developers can work on the same repository</li>
-              <li>Each developer can create their own branches</li>
-              <li>Changes can be reviewed before merging</li>
+              <li>Explain what your changes do</li>
+              <li>Provide screenshots if necessary</li>
+              <li>Link related issues</li>
             </ul>
 
-            <h3>Pulling Changes</h3>
-
             <p>
-              When working with a team, you should regularly pull updates from
-              the shared repository.
+              A pull request allows team members to review the code before it
+              becomes part of the main project.
             </p>
 
-            <pre><code>git pull</code></pre>
+            <h3>Step 6 — Code Review and Merge</h3>
 
             <p>
-              This command fetches the latest changes from the remote repository
-              and updates your local project.
-            </p>
-
-            <h3>Pull Requests</h3>
-
-            <p>
-              On platforms like GitHub, developers typically submit their
-              changes through a <strong>pull request</strong>.
+              Other developers review the changes and may request improvements.
             </p>
 
             <ul>
-              <li>Propose new features or fixes</li>
-              <li>Allow team members to review code</li>
-              <li>Ensure code quality before merging</li>
-            </ul>
-
-            <h3>Code Reviews</h3>
-
-            <p>
-              Reviewing code is an important part of teamwork. It helps catch
-              bugs, improve code quality, and share knowledge across the team.
-            </p>
-
-            <ul>
-              <li>Check logic and readability</li>
+              <li>Check code quality</li>
+              <li>Ensure the feature works correctly</li>
               <li>Suggest improvements</li>
-              <li>Ensure project standards are followed</li>
             </ul>
 
             <p>
-              Collaboration is a core part of modern development, and Git makes
-              it possible for teams around the world to build software together.
+              Once approved, the pull request is merged into the
+              <code>main</code>
+              branch, and the feature becomes part of the project.
+            </p>
+
+            <h3>The Full Collaboration Workflow</h3>
+
+            <pre><code>git checkout main
+git pull origin main
+git checkout -b feature-name
+git add .
+git commit -m "Describe your changes"
+git push origin feature-name</code></pre>
+
+            <p>
+              Then create a <strong>Pull Request on GitHub</strong> and wait for
+              review before merging.
             </p>
           </div>
         </main>
